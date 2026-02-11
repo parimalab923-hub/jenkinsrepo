@@ -1,13 +1,12 @@
-
 pipeline {
     agent any 
     environment {
       JAVA_VERSION = "11.0"
       JAVA_PATH = "/usr/sbin/java"
     }
-parameters {
-  choice choices: ['dev ', 'sit', 'uat', 'pt'], name: 'ENV'
-  string defaultValue: '1.0.0', name: 'version'
+  parameters {
+    choice choices: ['dev ', 'sit', 'uat', 'pt'], name: 'ENV'
+    string defaultValue: '1.0.0', name: 'version'
 }
 
     stages {
