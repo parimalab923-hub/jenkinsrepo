@@ -1,7 +1,7 @@
 def myfunction() {
 println "hi i am new dev"
 }
-def myfunctionwithparams() {
+def myfunctionwithparams(a,b) {
 sum = a + b
 println "add of a & b is ${sum}"
 }
