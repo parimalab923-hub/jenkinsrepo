@@ -1,22 +1,23 @@
+def myfunction() {
+println "hi i am new dev"
+}
+def myfunctionwithparams() {
+sum = a + b
+println "add of a & b is ${sum}"
+}
 pipeline {
     agent any 
         stages {
-            stage("working with loops") {
+            stage("welcome to dvs") {
                 steps {
                     script {
-                       a=1
-                       while ( a <= 10 ){
-                        println "a value is ${a}"
-                        a = a + 1
-                       }
-                       // working with for loop
-                       for(i=1;i<=10;i++) {
-                        println "my i value is ${i}"
-                       }
+                        myfunction()
+                        myfunctionwithparams(10,20)
                     }
                 }
             }
         }
     
 }
+
 
