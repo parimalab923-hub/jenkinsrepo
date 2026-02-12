@@ -1,23 +1,18 @@
-def myfunction() {
-println "hi i am new dev"
-}
-def myfunctionwithparams(a,b) {
-sum = a + b
-println "add of a & b is ${sum}"
-}
 pipeline {
-    agent any 
-        stages {
-            stage("welcome to dvs") {
-                steps {
-                    script {
-                        myfunction()
-                        myfunctionwithparams(10,20)
-                    }
-                }
-            }
+  agent any 
+  stages {
+    stage('working with files') {
+      steps {
+        script {
+          File file = new File("/tmp/file1.txt")
+          def lines = file.readLines()
+          println "Lines\n ${lines}"
+          for(line in lines)
+          {
+            println line
+          }
         }
-    
+      }
+    }
+  }
 }
-
-
